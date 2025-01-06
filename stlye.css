@@ -1,26 +1,61 @@
+/* Körper (Background + Fade-In) */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #1E90FF, #00008B); /* Gradient von oben hellblau nach unten dunkelblau */
+    background: linear-gradient(to bottom, #1e90ff, #00008b);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     color: white;
+    overflow: hidden; /* Kein Scrollen */
 }
 
-h1 {
-    font-size: 3rem; /* Große Schrift */
-    font-weight: bold; /* Fettgedruckt */
-    text-transform: uppercase; /* Alles in Großbuchstaben */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Leichter Textschatten */
+.fade-frame {
+    background: rgba(0, 0, 0, 0.6); /* Dunkler Rahmen */
+    backdrop-filter: blur(15px); /* Blur-Effekt */
+    border-radius: 20px; /* Abgerundete Ecken */
+    padding: 30px;
+    animation: fadeIn 2s ease-in-out; /* Verblass-Animation */
+}
 
-    /* Label-Styling */
-    background: rgba(255, 255, 255, 0.2); /* Halbtransparenter weißer Hintergrund */
-    border-radius: 15px; /* Abgerundete Ecken */
-    padding: 20px 40px; /* Abstand innen */
-    backdrop-filter: blur(10px); /* Unschärfe-Effekt */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); /* Schatten für 3D-Effekt */
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Abstand zwischen Buttons */
+}
+
+/* Buttons */
+.animated-button {
+    background: rgba(255, 255, 255, 0.2); /* Halbtransparenter Hintergrund */
+    border: none;
+    border-radius: 15px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease; /* Sanfte Übergänge */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* 3D-Schatten */
+}
+
+/* Hover-Effekt für Buttons */
+.animated-button:hover {
+    transform: scale(1.1); /* Pop-Up-Effekt */
+    background: rgba(255, 255, 255, 0.4); /* Etwas heller */
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5); /* Glühen */
+    color: #1e90ff; /* Text wird blau */
 }
