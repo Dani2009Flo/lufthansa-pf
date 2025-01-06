@@ -1,11 +1,19 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    text-align: center;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Standard-Schriftart */
+    background: linear-gradient(to bottom, #1E90FF, #00008B); /* Gradient von oben hellblau nach unten dunkelblau */
+    height: 100vh; /* Die Seite nimmt die gesamte Höhe des Fensters ein */
+    display: flex; /* Inhalt zentrieren */
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+    color: white; /* Textfarbe */
+    text-align: center;
 }
+
 h1 {
-    color: #007BFF;
+    font-size: 3rem; /* Große Schrift */
+    font-weight: bold; /* Fettgedruckt */
+    text-transform: uppercase; /* Alles in Großbuchstaben */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Leichter Schatten für den Text */
 }
