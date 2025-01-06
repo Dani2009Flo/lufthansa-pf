@@ -1,19 +1,26 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif; /* Standard-Schriftart */
+    font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #1E90FF, #00008B); /* Gradient von oben hellblau nach unten dunkelblau */
-    height: 100vh; /* Die Seite nimmt die gesamte Höhe des Fensters ein */
-    display: flex; /* Inhalt zentrieren */
-    justify-content: center; /* Horizontal zentrieren */
-    align-items: center; /* Vertikal zentrieren */
-    color: white; /* Textfarbe */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    color: white;
 }
 
 h1 {
     font-size: 3rem; /* Große Schrift */
     font-weight: bold; /* Fettgedruckt */
     text-transform: uppercase; /* Alles in Großbuchstaben */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Leichter Schatten für den Text */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Leichter Textschatten */
+
+    /* Label-Styling */
+    background: rgba(255, 255, 255, 0.2); /* Halbtransparenter weißer Hintergrund */
+    border-radius: 15px; /* Abgerundete Ecken */
+    padding: 20px 40px; /* Abstand innen */
+    backdrop-filter: blur(10px); /* Unschärfe-Effekt */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); /* Schatten für 3D-Effekt */
 }
